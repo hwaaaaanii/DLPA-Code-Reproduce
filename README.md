@@ -38,7 +38,6 @@ The paper evaluates the proposed algorithm on eight different benchmarks. Below 
     git clone https://github.com/cycraig/gym-goal
     cd gym-goal
     pip install -e '.[gym-goal]'
-    cd ..
     ```
 
 4. Navigate to the project directory:
