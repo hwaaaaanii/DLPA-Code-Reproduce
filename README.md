@@ -99,14 +99,14 @@ The results of the reproduced experiments are summarized in the following table:
 
 | Environment | Performance (ours) | Performance (paper) |
 |-------------|---------------------|---------------------|
-| Platform    | ...                 | 0.92                |
-| Goal        | ...                 | 28.75               |
-| Hard Goal   | N/A                 | 28.38               |
-| Catch Point | ...                 | 7.56                |
-| Hard Move (4) | ...               | 6.29                |
-| Hard Move (6) | ...               | 8.48                |
-| Hard Move (8) | ...               | 7.80                |
-| Hard Move (10) | Partial          | 6.35                |
+| Platform    | ...                 | 0.92 ± 0.05         |
+| Goal        | ...                 | 28.75 ± 6.91        |
+| Hard Goal   | N/A                 | 28.38 ± 2.88        |
+| Catch Point | ...                 | 7.56 ± 4.86         |
+| Hard Move (4) | ...               | 6.29 ± 5.74         |
+| Hard Move (6) | ...               | 8.48 ± 5.45         |
+| Hard Move (8) | ...               | 7.80 ± 6.27         |
+| Hard Move (10) | Partial          | 6.35 ± 9.97         |
 
 *(Fill in the table with the results of your experiments.)*
 
