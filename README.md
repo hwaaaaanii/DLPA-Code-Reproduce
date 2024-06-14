@@ -1,4 +1,3 @@
-
 # KAIST IE437 Final Project
 
 This repository contains the implementation and reproduction of experiments from the paper **[ICML 2024] “Model-based Reinforcement Learning for Parameterized Action Spaces”** by Renhao Zhang et al.
@@ -11,10 +10,23 @@ This project aims to reproduce the experiments presented in the aforementioned p
 
 The paper proposes a new algorithm, DLPA (Dynamics Learning and Predictive Control with Parameterized Actions), which is tailored for Parameterized Action Markov Decision Processes (PAMDPs). Key contributions of the paper include:
 
-1. Three inference structures for the transition model considering the entangled parameterized action space.
-2. Transition model updates with H-step loss.
-3. Learning two separate reward predictors conditioned on the prediction for termination.
-4. A PAMDP-specific Model Predictive Path Integral (MPPI) control approach.
+1. **Three inference structures** for the transition model considering the entangled parameterized action space.
+2. **Transition model updates** with H-step loss.
+3. **Learning two separate reward predictors** conditioned on the prediction for termination.
+4. **A PAMDP-specific Model Predictive Path Integral (MPPI) control** approach.
+
+### Parameterized Action Markov Decision Processes (PAMDPs)
+
+PAMDPs extend the traditional Markov Decision Process (MDP) framework by introducing parameterized actions. Each discrete action is parameterized by some continuous parameters, making the action space more complex and semantically meaningful. This allows for more structural exploration and solving more complex tasks.
+
+### Dynamics Learning and Predictive Control with Parameterized Actions (DLPA)
+
+DLPA is designed to handle the complexity of PAMDPs by incorporating the following elements:
+- **Transition Predictor**: Predicts the next state given the current state, discrete action, and continuous parameters.
+- **Reward Predictor**: Predicts the reward for the given state-action pair.
+- **Continuation Predictor**: Determines whether the trajectory continues at the next time step.
+
+The algorithm uses H-step prediction loss to train these components, improving the agent's understanding of long-term consequences of actions.
 
 ## Experimental Setup
 
@@ -69,22 +81,22 @@ The paper evaluates the proposed algorithm on eight different benchmarks. Below 
 
 5. **Hard Move (4 Directions)**
     ```sh
-    python main.py --env 'simple_move_4_direction_v1-v0' --mpc_horizon 5 --action_n_dim 4 --save_points 0 --model_type "concat" --save_dir “4”
+    python main.py --env 'simple_move_4_direction_v1-v0' --mpc_horizon 5 --action_n_dim 4 --save_points 0 --model_type "concat" --save_dir "4"
     ```
 
 6. **Hard Move (6 Directions)**
     ```sh
-    python main.py --env 'simple_move_4_direction_v1-v0' --mpc_horizon 5 --action_n_dim 6 --save_points 0 --model_type "concat" --save_dir “6”
+    python main.py --env 'simple_move_4_direction_v1-v0' --mpc_horizon 5 --action_n_dim 6 --save_points 0 --model_type "concat" --save_dir "6"
     ```
 
 7. **Hard Move (8 Directions)**
     ```sh
-    python main.py --env 'simple_move_4_direction_v1-v0' --mpc_horizon 5 --action_n_dim 8 --save_points 0 --model_type "concat" --save_dir “8”
+    python main.py --env 'simple_move_4_direction_v1-v0' --mpc_horizon 5 --action_n_dim 8 --save_points 0 --model_type "concat" --save_dir "8"
     ```
 
 8. **Hard Move (10 Directions)**
     ```sh
-    python main.py --env 'simple_move_4_direction_v1-v0' --mpc_horizon 5 --action_n_dim 10 --save_points 0 --model_type "concat" --save_dir “10”
+    python main.py --env 'simple_move_4_direction_v1-v0' --mpc_horizon 5 --action_n_dim 10 --save_points 0 --model_type "concat" --save_dir "10"
     ```
 
 ## Notes on Reproduction
@@ -106,8 +118,6 @@ The results of the reproduced experiments are summarized in the following table:
 | Hard Move (6) | ...               | 8.48 ± 5.45         |
 | Hard Move (8) | ...               | 7.80 ± 6.27         |
 | Hard Move (10) | Partial          | 6.35 ± 9.97         |
-
-*(Fill in the table with the results of your experiments.)*
 
 ## Conclusion
 
