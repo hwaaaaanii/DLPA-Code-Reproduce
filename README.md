@@ -55,7 +55,19 @@ The paper evaluates the proposed algorithm on eight different benchmarks. Below 
 
 4. Navigate to the project directory:
     ```sh
-    cd DLPA-main
+    cd -
+    ```
+
+5. Clone and install the `gym-goal` package:
+    ```sh
+    git clone https://github.com/cycraig/gym-platform
+    cd gym-platform
+    pip install -e '.[gym-platform]'
+    ```
+
+6. Clone and install the `gym-goal` package:
+    ```sh
+    cd -
     ```
 
 ### Running Experiments
