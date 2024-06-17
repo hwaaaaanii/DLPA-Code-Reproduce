@@ -123,7 +123,7 @@ The results of the reproduced experiments are summarized in the following table:
 
 | Environment | Performance (ours) | Performance (paper) |
 |-------------|---------------------|---------------------|
-| Platform    | 0.99 ± 0.0          | 0.92 ± 0.05         |
+| Platform    | 0.99 ± 0.01         | 0.92 ± 0.05         |
 | Goal        | 27.69 ± 4.04        | 28.75 ± 6.91        |
 | Hard Goal   | N/A                 | 28.38 ± 2.88        |
 | Catch Point | 3.87 ± 3.24         | 7.56 ± 4.86         |
